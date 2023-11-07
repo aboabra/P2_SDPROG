@@ -1,0 +1,52 @@
+
+`timescale 1ns/1ps
+
+module LCD_SYNC_tb()
+	
+	localparam T = 40;
+	wire horizontalD, verticalD, display_en, reseto, clko;
+	reg clki;
+	reg reseti;
+	
+	LCD_SYNC DUT(.CLK(clki),	.RESET(reseti),	.NCLK(clko),	.GREST(reseto),	.HD(horizontalD),	.VD(verticalD),	.DEN(display_en))
+
+
+	initial
+	begin
+		RESET_ALL();
+		WAIT_TIME(2);
+		WAIT_HD();
+		//WAIT_VD();
+		$stop;
+	end
+
+
+	task RESET_ALL
+	begin
+		reseti = 1'b0;
+		WAIT_TIME(2);
+		reseti = 1'b1;
+	end
+	endtask
+
+
+	task WAIT_TIME(tiempo)
+	begin
+		#(T*tiempo)
+	end
+	endtask
+
+
+	task WAIT_HD
+	begin
+		#(negedge HD)
+	end
+	endtask
+
+	task WAIT_VD
+	begin
+		#(negedge VD)
+	end
+	endtask
+
+endmodule
