@@ -1,0 +1,62 @@
+module barras_rgb(COLUMNA.R,G,B)
+
+input [10:0]COLUMNA;
+
+output reg [7:0]R;
+output reg [7:0]G;
+output reg [7:0]B;
+
+parameter width_barra = 100;
+
+always @(COLUMNA)
+begin
+	if (COLUMNA < width_barra)
+	{
+		R=255;
+		G=255;
+		B=255;
+	}
+	elif (COLUMNA < 2*width_barra)
+	{
+		R=255;
+		G=255;
+		B=0;
+	}
+	elif (COLUMNA < 3*width_barra)
+	{
+		R=0;
+		G=255;
+		B=255;
+	}
+	elif (COLUMNA < 4*width_barra)
+	{
+		R=0;
+		G=255;
+		B=0;
+	}
+	elif (COLUMNA < 5*width_barra)
+	{
+		R=255;
+		G=0;
+		B=255;
+	}
+	elif (COLUMNA < 6*width_barra)
+	{
+		R=255;
+		G=0;
+		B=0;
+	}
+	elif (COLUMNA < 7*width_barra)
+	{
+		R=0;
+		G=0;
+		B=255;
+	}
+	else
+	{
+		R=0;
+		G=0;
+		B=0;
+	}
+end
+endmodule
