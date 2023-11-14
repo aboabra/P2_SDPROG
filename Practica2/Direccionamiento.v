@@ -1,7 +1,7 @@
 module Direccionamiento(FILA,COLUMNA, address);
 
-	input 	[8:0]FILA;
-	input 	[9:0]COLUMNA;
+	input 	[9:0]FILA;
+	input 	[10:0]COLUMNA;
 	reg 		[8:0]fila_p;
 	reg 		[9:0]columna_p;
 	reg 		[7:0]fila_i;

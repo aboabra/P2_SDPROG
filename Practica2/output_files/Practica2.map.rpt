@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Practica2
-Fri Nov 10 14:19:05 2023
-Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+Tue Nov 14 11:53:09 2023
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -13,8 +13,8 @@ Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Source assignments for ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated
@@ -26,14 +26,12 @@ Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
  18. altpll Parameter Settings by Entity Instance
  19. altsyncram Parameter Settings by Entity Instance
  20. Port Connectivity Checks: "ROM_image:ROM_image_inst"
- 21. Port Connectivity Checks: "Direccionamiento:Dir_module"
- 22. Port Connectivity Checks: "LCD_SYNC:lcd_sync_module|contNb:counterV"
- 23. Port Connectivity Checks: "LCD_SYNC:lcd_sync_module|contNb:counterH"
- 24. Port Connectivity Checks: "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer"
- 25. Port Connectivity Checks: "LCD_SYNC:lcd_sync_module"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 21. Port Connectivity Checks: "LCD_SYNC:lcd_sync_module|contNb:counterV"
+ 22. Port Connectivity Checks: "LCD_SYNC:lcd_sync_module|contNb:counterH"
+ 23. Port Connectivity Checks: "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -56,24 +54,24 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                                  ;
-+------------------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 10 14:19:05 2023                    ;
-; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
-; Revision Name                      ; Practica2                                                ;
-; Top-level Entity Name              ; IMAGEN_LCD                                               ;
-; Family                             ; Cyclone IV E                                             ;
-; Total logic elements               ; 44                                                       ;
-;     Total combinational functions  ; 44                                                       ;
-;     Dedicated logic registers      ; 21                                                       ;
-; Total registers                    ; 21                                                       ;
-; Total pins                         ; 31                                                       ;
-; Total virtual pins                 ; 0                                                        ;
-; Total memory bits                  ; 0                                                        ;
-; Embedded Multiplier 9-bit elements ; 0                                                        ;
-; Total PLLs                         ; 1                                                        ;
-+------------------------------------+----------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 14 11:53:09 2023       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Practica2                                   ;
+; Top-level Entity Name              ; IMAGEN_LCD                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 201                                         ;
+;     Total combinational functions  ; 201                                         ;
+;     Dedicated logic registers      ; 25                                          ;
+; Total registers                    ; 25                                          ;
+; Total pins                         ; 31                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,536,000                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -167,100 +165,116 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
-; LCD_SYNC.v                       ; yes             ; User Verilog HDL File                  ; W:/SDPROG/P2/Practica2/LCD_SYNC.v                                       ;         ;
-; contNb.v                         ; yes             ; User Verilog HDL File                  ; W:/SDPROG/P2/Practica2/contNb.v                                         ;         ;
-; pll_ltm.v                        ; yes             ; User Wizard-Generated File             ; W:/SDPROG/P2/Practica2/pll_ltm.v                                        ;         ;
-; Direccionamiento.v               ; yes             ; User Verilog HDL File                  ; W:/SDPROG/P2/Practica2/Direccionamiento.v                               ;         ;
-; ROM_image.v                      ; yes             ; User Wizard-Generated File             ; W:/SDPROG/P2/Practica2/ROM_image.v                                      ;         ;
-; IMAGEN_LCD.v                     ; yes             ; User Verilog HDL File                  ; W:/SDPROG/P2/Practica2/IMAGEN_LCD.v                                     ;         ;
-; datos_a_rgb.v                    ; yes             ; User Verilog HDL File                  ; W:/SDPROG/P2/Practica2/datos_a_rgb.v                                    ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/pll_ltm_altpll.v              ; yes             ; Auto-Generated Megafunction            ; W:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v                              ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_b3b1.tdf           ; yes             ; Auto-Generated Megafunction            ; W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf                           ;         ;
-; imagen_rgb16_xy.hex              ; yes             ; Auto-Found Memory Initialization File  ; W:/SDPROG/P2/Practica2/imagen_rgb16_xy.hex                              ;         ;
-; db/decode_0aa.tdf                ; yes             ; Auto-Generated Megafunction            ; W:/SDPROG/P2/Practica2/db/decode_0aa.tdf                                ;         ;
-; db/mux_5qb.tdf                   ; yes             ; Auto-Generated Megafunction            ; W:/SDPROG/P2/Practica2/db/mux_5qb.tdf                                   ;         ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                                      ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
+; LCD_SYNC.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v             ;         ;
+; contNb.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v               ;         ;
+; pll_ltm.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v              ;         ;
+; Direccionamiento.v               ; yes             ; User Verilog HDL File                  ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v     ;         ;
+; ROM_image.v                      ; yes             ; User Wizard-Generated File             ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v            ;         ;
+; IMAGEN_LCD.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v           ;         ;
+; datos_a_rgb.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/datos_a_rgb.v          ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf                                                                 ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                                                             ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_pll.inc                                                            ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratixii_pll.inc                                                          ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                                          ;         ;
+; db/pll_ltm_altpll.v              ; yes             ; Auto-Generated Megafunction            ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/pll_ltm_altpll.v    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                             ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                      ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                                             ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                              ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                                                 ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                                                 ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                                               ;         ;
+; db/altsyncram_b3b1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf ;         ;
+; imagen_rgb16_xy.hex              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/imagen_rgb16_xy.hex    ;         ;
+; db/decode_0aa.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/decode_0aa.tdf      ;         ;
+; db/mux_5qb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/mux_5qb.tdf         ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                     ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                                             ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 44                                                                                                                ;
-;                                             ;                                                                                                                   ;
-; Total combinational functions               ; 44                                                                                                                ;
-; Logic element usage by number of LUT inputs ;                                                                                                                   ;
-;     -- 4 input functions                    ; 17                                                                                                                ;
-;     -- 3 input functions                    ; 4                                                                                                                 ;
-;     -- <=2 input functions                  ; 23                                                                                                                ;
-;                                             ;                                                                                                                   ;
-; Logic elements by mode                      ;                                                                                                                   ;
-;     -- normal mode                          ; 25                                                                                                                ;
-;     -- arithmetic mode                      ; 19                                                                                                                ;
-;                                             ;                                                                                                                   ;
-; Total registers                             ; 21                                                                                                                ;
-;     -- Dedicated logic registers            ; 21                                                                                                                ;
-;     -- I/O registers                        ; 0                                                                                                                 ;
-;                                             ;                                                                                                                   ;
-; I/O pins                                    ; 31                                                                                                                ;
-;                                             ;                                                                                                                   ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                                                                 ;
-;                                             ;                                                                                                                   ;
-; Total PLLs                                  ; 1                                                                                                                 ;
-;     -- PLLs                                 ; 1                                                                                                                 ;
-;                                             ;                                                                                                                   ;
-; Maximum fan-out node                        ; LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component|pll_ltm_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 23                                                                                                                ;
-; Total fan-out                               ; 235                                                                                                               ;
-; Average fan-out                             ; 1.84                                                                                                              ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                 ;
++---------------------------------------------+-----------------------------------------------+
+; Resource                                    ; Usage                                         ;
++---------------------------------------------+-----------------------------------------------+
+; Estimated Total logic elements              ; 201                                           ;
+;                                             ;                                               ;
+; Total combinational functions               ; 201                                           ;
+; Logic element usage by number of LUT inputs ;                                               ;
+;     -- 4 input functions                    ; 160                                           ;
+;     -- 3 input functions                    ; 3                                             ;
+;     -- <=2 input functions                  ; 38                                            ;
+;                                             ;                                               ;
+; Logic elements by mode                      ;                                               ;
+;     -- normal mode                          ; 169                                           ;
+;     -- arithmetic mode                      ; 32                                            ;
+;                                             ;                                               ;
+; Total registers                             ; 25                                            ;
+;     -- Dedicated logic registers            ; 25                                            ;
+;     -- I/O registers                        ; 0                                             ;
+;                                             ;                                               ;
+; I/O pins                                    ; 31                                            ;
+; Total memory bits                           ; 1536000                                       ;
+;                                             ;                                               ;
+; Embedded Multiplier 9-bit elements          ; 0                                             ;
+;                                             ;                                               ;
+; Total PLLs                                  ; 1                                             ;
+;     -- PLLs                                 ; 1                                             ;
+;                                             ;                                               ;
+; Maximum fan-out node                        ; LCD_SYNC:lcd_sync_module|contNb:counterH|Q[1] ;
+; Maximum fan-out                             ; 197                                           ;
+; Total fan-out                               ; 3744                                          ;
+; Average fan-out                             ; 7.78                                          ;
++---------------------------------------------+-----------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                   ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Entity Name    ; Library Name ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |IMAGEN_LCD                                 ; 44 (0)              ; 21 (0)                    ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |IMAGEN_LCD                                                                                                  ; IMAGEN_LCD     ; work         ;
-;    |LCD_SYNC:lcd_sync_module|               ; 44 (16)             ; 21 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module                                                                         ; LCD_SYNC       ; work         ;
-;       |contNb:counterH|                     ; 16 (16)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|contNb:counterH                                                         ; contNb         ; work         ;
-;       |contNb:counterV|                     ; 12 (12)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|contNb:counterV                                                         ; contNb         ; work         ;
-;       |pll_ltm:pll_timer|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer                                                       ; pll_ltm        ; work         ;
-;          |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component                               ; altpll         ; work         ;
-;             |pll_ltm_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component|pll_ltm_altpll:auto_generated ; pll_ltm_altpll ; work         ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Entity Name      ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; |IMAGEN_LCD                                 ; 201 (0)             ; 25 (0)                    ; 1536000     ; 0            ; 0       ; 0         ; 31   ; 0            ; |IMAGEN_LCD                                                                                                                ; IMAGEN_LCD       ; work         ;
+;    |Direccionamiento:Dir_module|            ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|Direccionamiento:Dir_module                                                                                    ; Direccionamiento ; work         ;
+;    |LCD_SYNC:lcd_sync_module|               ; 46 (14)             ; 21 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module                                                                                       ; LCD_SYNC         ; work         ;
+;       |contNb:counterH|                     ; 19 (19)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|contNb:counterH                                                                       ; contNb           ; work         ;
+;       |contNb:counterV|                     ; 13 (13)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|contNb:counterV                                                                       ; contNb           ; work         ;
+;       |pll_ltm:pll_timer|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer                                                                     ; pll_ltm          ; work         ;
+;          |altpll:altpll_component|          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component                                             ; altpll           ; work         ;
+;             |pll_ltm_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component|pll_ltm_altpll:auto_generated               ; pll_ltm_altpll   ; work         ;
+;    |ROM_image:ROM_image_inst|               ; 140 (0)             ; 4 (0)                     ; 1536000     ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|ROM_image:ROM_image_inst                                                                                       ; ROM_image        ; work         ;
+;       |altsyncram:altsyncram_component|     ; 140 (0)             ; 4 (0)                     ; 1536000     ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|ROM_image:ROM_image_inst|altsyncram:altsyncram_component                                                       ; altsyncram       ; work         ;
+;          |altsyncram_b3b1:auto_generated|   ; 140 (0)             ; 4 (4)                     ; 1536000     ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated                        ; altsyncram_b3b1  ; work         ;
+;             |decode_0aa:rden_decode|        ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|decode_0aa:rden_decode ; decode_0aa       ; work         ;
+;             |mux_5qb:mux2|                  ; 128 (128)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |IMAGEN_LCD|ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|mux_5qb:mux2           ; mux_5qb          ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+------------------------+
+; Name                                                                                               ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                    ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+------------------------+
+; ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 96000        ; 24           ; --           ; --           ; 2304000 ; ../imagen_rgb16_xy.hex ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+---------+------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -273,23 +287,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------+-----------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                   ;
-+-------------------------------------------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                                                               ; Reason for Removal                     ;
-+-------------------------------------------------------------------------------------------------------------+----------------------------------------+
-; ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|address_reg_a[1..3] ; Stuck at VCC due to stuck port data_in ;
-; ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|address_reg_a[0]    ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4                                                                       ;                                        ;
-+-------------------------------------------------------------------------------------------------------------+----------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 25    ;
 ; Number of registers using Synchronous Clear  ; 21    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -838,16 +841,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Direccionamiento:Dir_module"                                                                                                                       ;
-+---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                          ;
-+---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; FILA    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "FILA[8..1]" will be connected to GND.     ;
-; COLUMNA ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "COLUMNA[9..1]" will be connected to GND. ;
-+---------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------+
 ; Port Connectivity Checks: "LCD_SYNC:lcd_sync_module|contNb:counterV" ;
 +---------+-------+----------+-----------------------------------------+
@@ -877,38 +870,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "LCD_SYNC:lcd_sync_module"                                                                                                       ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                      ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
-; COLUMNA ; Output ; Warning  ; Output or bidir port (11 bits) is wider than the port expression (1 bits) it drives; bit(s) "COLUMNA[10..1]" have no fanouts ;
-; FILA    ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "FILA[9..1]" have no fanouts     ;
-+---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 31                          ;
-; cycloneiii_ff         ; 21                          ;
+; cycloneiii_ff         ; 25                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 11                          ;
-; cycloneiii_lcell_comb ; 45                          ;
-;     arith             ; 19                          ;
-;         2 data inputs ; 19                          ;
-;     normal            ; 26                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 17                          ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 201                         ;
+;     arith             ; 32                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 169                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 160                         ;
 ; cycloneiii_pll        ; 1                           ;
+; cycloneiii_ram_block  ; 192                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.42                        ;
+; Average LUT depth     ; 3.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -917,7 +902,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -926,43 +911,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Fri Nov 10 14:18:52 2023
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Nov 14 11:52:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica2 -c Practica2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file imagen_lcd_tb.v
-    Info (12023): Found entity 1: IMAGEN_LCD_tb File: W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v Line: 4
+    Info (12023): Found entity 1: IMAGEN_LCD_tb File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD_tb.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file lcd_sync.v
-    Info (12023): Found entity 1: LCD_SYNC File: W:/SDPROG/P2/Practica2/LCD_SYNC.v Line: 1
+    Info (12023): Found entity 1: LCD_SYNC File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contnb.v
-    Info (12023): Found entity 1: contNb File: W:/SDPROG/P2/Practica2/contNb.v Line: 16
+    Info (12023): Found entity 1: contNb File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file pll_ltm.v
-    Info (12023): Found entity 1: pll_ltm File: W:/SDPROG/P2/Practica2/pll_ltm.v Line: 39
+    Info (12023): Found entity 1: pll_ltm File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file lcd_sync_tb.v
-    Info (12023): Found entity 1: LCD_SYNC_tb File: W:/SDPROG/P2/Practica2/LCD_SYNC_tb.v Line: 4
+    Info (12023): Found entity 1: LCD_SYNC_tb File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC_tb.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file barras_rgb.v
-    Info (12023): Found entity 1: barras_rgb File: W:/SDPROG/P2/Practica2/barras_rgb.v Line: 1
+    Info (12023): Found entity 1: barras_rgb File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/barras_rgb.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file barras_lcd.v
-    Info (12023): Found entity 1: barras_lcd File: W:/SDPROG/P2/Practica2/barras_lcd.v Line: 1
+    Info (12023): Found entity 1: barras_lcd File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/barras_lcd.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file barras_lcd_tb.v
-    Info (12023): Found entity 1: barras_lcd_tb File: W:/SDPROG/P2/Practica2/barras_lcd_tb.v Line: 4
+    Info (12023): Found entity 1: barras_lcd_tb File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/barras_lcd_tb.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file direccionamiento.v
-    Info (12023): Found entity 1: Direccionamiento File: W:/SDPROG/P2/Practica2/Direccionamiento.v Line: 1
+    Info (12023): Found entity 1: Direccionamiento File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom_image.v
-    Info (12023): Found entity 1: ROM_image File: W:/SDPROG/P2/Practica2/ROM_image.v Line: 39
+    Info (12023): Found entity 1: ROM_image File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file imagen_lcd.v
-    Info (12023): Found entity 1: IMAGEN_LCD File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 1
+    Info (12023): Found entity 1: IMAGEN_LCD File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datos_a_rgb.v
-    Info (12023): Found entity 1: datos_a_rgb File: W:/SDPROG/P2/Practica2/datos_a_rgb.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at IMAGEN_LCD.v(11): created implicit net for "COLUMNA" File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at IMAGEN_LCD.v(11): created implicit net for "FILA" File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 11
+    Info (12023): Found entity 1: datos_a_rgb File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/datos_a_rgb.v Line: 1
 Info (12127): Elaborating entity "IMAGEN_LCD" for the top level hierarchy
-Info (12128): Elaborating entity "LCD_SYNC" for hierarchy "LCD_SYNC:lcd_sync_module" File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 11
-Info (12128): Elaborating entity "pll_ltm" for hierarchy "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer" File: W:/SDPROG/P2/Practica2/LCD_SYNC.v Line: 40
-Info (12128): Elaborating entity "altpll" for hierarchy "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component" File: W:/SDPROG/P2/Practica2/pll_ltm.v Line: 103
-Info (12130): Elaborated megafunction instantiation "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component" File: W:/SDPROG/P2/Practica2/pll_ltm.v Line: 103
-Info (12133): Instantiated megafunction "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component" with the following parameter: File: W:/SDPROG/P2/Practica2/pll_ltm.v Line: 103
+Info (12128): Elaborating entity "LCD_SYNC" for hierarchy "LCD_SYNC:lcd_sync_module" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v Line: 14
+Info (12128): Elaborating entity "pll_ltm" for hierarchy "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v Line: 40
+Info (12128): Elaborating entity "altpll" for hierarchy "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v Line: 103
+Info (12130): Elaborated megafunction instantiation "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v Line: 103
+Info (12133): Instantiated megafunction "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component" with the following parameter: File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v Line: 103
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1019,23 +1002,23 @@ Info (12133): Instantiated megafunction "LCD_SYNC:lcd_sync_module|pll_ltm:pll_ti
     Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_ltm_altpll.v
-    Info (12023): Found entity 1: pll_ltm_altpll File: W:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v Line: 30
-Info (12128): Elaborating entity "pll_ltm_altpll" for hierarchy "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component|pll_ltm_altpll:auto_generated" File: c:/intelfpga/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "contNb" for hierarchy "LCD_SYNC:lcd_sync_module|contNb:counterH" File: W:/SDPROG/P2/Practica2/LCD_SYNC.v Line: 41
-Warning (10230): Verilog HDL assignment warning at contNb.v(30): truncated value with size 32 to match size of target (11) File: W:/SDPROG/P2/Practica2/contNb.v Line: 30
-Warning (10230): Verilog HDL assignment warning at contNb.v(32): truncated value with size 32 to match size of target (11) File: W:/SDPROG/P2/Practica2/contNb.v Line: 32
-Info (12128): Elaborating entity "contNb" for hierarchy "LCD_SYNC:lcd_sync_module|contNb:counterV" File: W:/SDPROG/P2/Practica2/LCD_SYNC.v Line: 42
-Warning (10230): Verilog HDL assignment warning at contNb.v(30): truncated value with size 32 to match size of target (10) File: W:/SDPROG/P2/Practica2/contNb.v Line: 30
-Warning (10230): Verilog HDL assignment warning at contNb.v(32): truncated value with size 32 to match size of target (10) File: W:/SDPROG/P2/Practica2/contNb.v Line: 32
-Info (12128): Elaborating entity "Direccionamiento" for hierarchy "Direccionamiento:Dir_module" File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 12
-Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(13): truncated value with size 32 to match size of target (9) File: W:/SDPROG/P2/Practica2/Direccionamiento.v Line: 13
-Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(14): truncated value with size 32 to match size of target (10) File: W:/SDPROG/P2/Practica2/Direccionamiento.v Line: 14
-Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(19): truncated value with size 32 to match size of target (8) File: W:/SDPROG/P2/Practica2/Direccionamiento.v Line: 19
-Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(20): truncated value with size 32 to match size of target (9) File: W:/SDPROG/P2/Practica2/Direccionamiento.v Line: 20
-Info (12128): Elaborating entity "ROM_image" for hierarchy "ROM_image:ROM_image_inst" File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 13
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" File: W:/SDPROG/P2/Practica2/ROM_image.v Line: 81
-Info (12130): Elaborated megafunction instantiation "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" File: W:/SDPROG/P2/Practica2/ROM_image.v Line: 81
-Info (12133): Instantiated megafunction "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" with the following parameter: File: W:/SDPROG/P2/Practica2/ROM_image.v Line: 81
+    Info (12023): Found entity 1: pll_ltm_altpll File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/pll_ltm_altpll.v Line: 30
+Info (12128): Elaborating entity "pll_ltm_altpll" for hierarchy "LCD_SYNC:lcd_sync_module|pll_ltm:pll_timer|altpll:altpll_component|pll_ltm_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "contNb" for hierarchy "LCD_SYNC:lcd_sync_module|contNb:counterH" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v Line: 41
+Warning (10230): Verilog HDL assignment warning at contNb.v(30): truncated value with size 32 to match size of target (11) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v Line: 30
+Warning (10230): Verilog HDL assignment warning at contNb.v(32): truncated value with size 32 to match size of target (11) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v Line: 32
+Info (12128): Elaborating entity "contNb" for hierarchy "LCD_SYNC:lcd_sync_module|contNb:counterV" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v Line: 42
+Warning (10230): Verilog HDL assignment warning at contNb.v(30): truncated value with size 32 to match size of target (10) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v Line: 30
+Warning (10230): Verilog HDL assignment warning at contNb.v(32): truncated value with size 32 to match size of target (10) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v Line: 32
+Info (12128): Elaborating entity "Direccionamiento" for hierarchy "Direccionamiento:Dir_module" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v Line: 15
+Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(13): truncated value with size 32 to match size of target (9) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v Line: 13
+Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(14): truncated value with size 32 to match size of target (10) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v Line: 14
+Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(19): truncated value with size 32 to match size of target (8) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v Line: 19
+Warning (10230): Verilog HDL assignment warning at Direccionamiento.v(20): truncated value with size 32 to match size of target (9) File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v Line: 20
+Info (12128): Elaborating entity "ROM_image" for hierarchy "ROM_image:ROM_image_inst" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v Line: 16
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v Line: 81
+Info (12130): Elaborated megafunction instantiation "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v Line: 81
+Info (12133): Instantiated megafunction "ROM_image:ROM_image_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1051,345 +1034,127 @@ Info (12133): Instantiated megafunction "ROM_image:ROM_image_inst|altsyncram:alt
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b3b1.tdf
-    Info (12023): Found entity 1: altsyncram_b3b1 File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 31
-Info (12128): Elaborating entity "altsyncram_b3b1" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated" File: c:/intelfpga/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_b3b1 File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 31
+Info (12128): Elaborating entity "altsyncram_b3b1" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_0aa.tdf
-    Info (12023): Found entity 1: decode_0aa File: W:/SDPROG/P2/Practica2/db/decode_0aa.tdf Line: 22
-Info (12128): Elaborating entity "decode_0aa" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|decode_0aa:rden_decode" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 39
+    Info (12023): Found entity 1: decode_0aa File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/decode_0aa.tdf Line: 22
+Info (12128): Elaborating entity "decode_0aa" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|decode_0aa:rden_decode" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_5qb.tdf
-    Info (12023): Found entity 1: mux_5qb File: W:/SDPROG/P2/Practica2/db/mux_5qb.tdf Line: 22
-Info (12128): Elaborating entity "mux_5qb" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|mux_5qb:mux2" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 40
-Info (12128): Elaborating entity "datos_a_rgb" for hierarchy "datos_a_rgb:datos_a_rgb_module" File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 14
+    Info (12023): Found entity 1: mux_5qb File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/mux_5qb.tdf Line: 22
+Info (12128): Elaborating entity "mux_5qb" for hierarchy "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|mux_5qb:mux2" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 40
+Info (12128): Elaborating entity "datos_a_rgb" for hierarchy "datos_a_rgb:datos_a_rgb_module" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v Line: 17
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a16" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 377
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a17" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 398
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a18" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 419
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a19" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 440
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a20" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 461
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a21" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 482
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a22" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 503
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a23" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 524
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a40" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 881
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a41" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 902
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a42" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 923
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a43" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 944
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a44" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 965
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a45" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 986
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a46" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1007
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a47" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1028
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a64" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1385
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a65" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1406
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a66" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1427
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a67" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1448
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a68" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1469
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a69" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1490
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a70" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1511
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a71" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1532
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a88" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1889
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a89" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1910
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a90" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1931
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a91" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1952
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a92" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1973
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a93" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1994
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a94" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2015
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a95" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2036
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a112" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2393
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a113" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2414
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a114" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2435
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a115" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2456
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a116" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2477
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a117" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2498
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a118" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2519
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a119" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2540
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a136" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2897
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a137" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2918
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a138" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2939
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a139" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2960
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a140" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2981
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a141" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3002
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a142" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3023
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a143" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3044
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a160" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3401
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a161" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3422
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a162" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3443
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a163" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3464
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a164" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3485
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a165" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3506
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a166" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3527
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a167" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3548
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a184" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3905
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a185" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3926
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a186" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3947
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a187" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3968
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a188" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3989
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a189" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4010
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a190" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4031
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a191" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4052
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a208" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4409
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a209" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4430
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a210" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4451
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a211" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4472
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a212" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4493
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a213" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4514
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a214" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4535
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a215" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4556
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a232" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4913
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a233" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4934
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a234" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4955
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a235" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4976
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a236" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4997
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a237" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5018
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a238" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5039
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a239" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5060
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a256" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5417
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a257" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5438
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a258" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5459
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a259" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5480
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a260" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5501
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a261" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5522
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a262" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5543
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a263" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5564
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a280" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5921
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a281" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5942
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a282" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5963
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a283" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5984
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a284" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 6005
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a285" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 6026
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a286" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 6047
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a287" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 6068
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a0" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 41
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a1" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 62
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a2" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 83
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a3" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 104
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a4" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 125
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a5" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 146
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a6" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 167
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a7" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 188
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a8" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 209
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a9" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 230
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a10" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 251
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a11" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 272
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a12" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 293
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a13" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 314
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a14" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 335
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a15" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 356
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a24" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 545
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a25" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 566
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a26" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 587
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a27" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 608
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a28" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 629
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a29" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 650
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a30" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 671
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a31" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 692
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a32" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 713
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a33" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 734
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a34" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 755
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a35" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 776
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a36" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 797
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a37" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 818
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a38" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 839
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a39" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 860
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a48" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1049
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a49" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1070
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a50" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1091
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a51" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1112
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a52" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1133
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a53" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1154
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a54" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1175
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a55" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1196
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a56" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1217
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a57" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1238
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a58" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1259
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a59" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1280
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a60" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1301
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a61" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1322
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a62" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1343
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a63" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1364
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a72" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1553
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a73" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1574
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a74" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1595
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a75" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1616
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a76" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1637
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a77" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1658
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a78" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1679
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a79" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1700
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a80" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1721
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a81" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1742
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a82" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1763
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a83" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1784
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a84" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1805
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a85" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1826
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a86" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1847
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a87" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 1868
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a96" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2057
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a97" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2078
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a98" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2099
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a99" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2120
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a100" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2141
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a101" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2162
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a102" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2183
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a103" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2204
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a104" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2225
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a105" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2246
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a106" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2267
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a107" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2288
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a108" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2309
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a109" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2330
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a110" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2351
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a111" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2372
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a120" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2561
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a121" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2582
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a122" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2603
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a123" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2624
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a124" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2645
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a125" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2666
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a126" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2687
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a127" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2708
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a128" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2729
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a129" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2750
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a130" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2771
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a131" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2792
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a132" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2813
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a133" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2834
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a134" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2855
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a135" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 2876
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a144" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3065
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a145" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3086
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a146" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3107
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a147" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3128
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a148" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3149
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a149" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3170
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a150" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3191
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a151" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3212
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a152" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3233
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a153" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3254
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a154" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3275
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a155" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3296
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a156" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3317
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a157" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3338
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a158" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3359
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a159" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3380
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a168" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3569
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a169" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3590
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a170" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3611
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a171" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3632
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a172" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3653
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a173" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3674
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a174" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3695
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a175" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3716
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a176" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3737
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a177" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3758
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a178" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3779
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a179" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3800
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a180" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3821
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a181" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3842
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a182" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3863
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a183" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 3884
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a192" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4073
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a193" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4094
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a194" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4115
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a195" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4136
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a196" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4157
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a197" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4178
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a198" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4199
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a199" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4220
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a200" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4241
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a201" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4262
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a202" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4283
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a203" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4304
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a204" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4325
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a205" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4346
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a206" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4367
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a207" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4388
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a216" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4577
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a217" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4598
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a218" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4619
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a219" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4640
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a220" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4661
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a221" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4682
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a222" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4703
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a223" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4724
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a224" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4745
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a225" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4766
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a226" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4787
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a227" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4808
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a228" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4829
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a229" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4850
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a230" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4871
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a231" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 4892
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a240" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5081
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a241" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5102
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a242" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5123
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a243" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5144
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a244" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5165
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a245" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5186
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a246" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5207
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a247" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5228
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a248" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5249
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a249" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5270
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a250" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5291
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a251" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5312
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a252" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5333
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a253" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5354
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a254" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5375
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a255" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5396
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a264" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5585
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a265" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5606
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a266" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5627
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a267" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5648
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a268" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5669
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a269" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5690
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a270" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5711
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a271" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5732
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a272" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5753
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a273" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5774
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a274" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5795
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a275" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5816
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a276" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5837
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a277" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5858
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a278" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5879
-        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a279" File: W:/SDPROG/P2/Practica2/db/altsyncram_b3b1.tdf Line: 5900
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "R[0]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "R[1]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "R[2]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "R[3]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "R[4]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "R[5]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "R[6]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "R[7]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 5
-    Warning (13410): Pin "G[0]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "G[1]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "G[2]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "G[3]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "G[4]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "G[5]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "G[6]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "G[7]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 6
-    Warning (13410): Pin "B[0]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
-    Warning (13410): Pin "B[1]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
-    Warning (13410): Pin "B[2]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
-    Warning (13410): Pin "B[3]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
-    Warning (13410): Pin "B[4]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
-    Warning (13410): Pin "B[5]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
-    Warning (13410): Pin "B[6]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
-    Warning (13410): Pin "B[7]" is stuck at GND File: W:/SDPROG/P2/Practica2/IMAGEN_LCD.v Line: 7
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a16" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 377
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a17" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 398
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a18" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 419
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a19" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 440
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a20" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 461
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a21" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 482
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a22" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 503
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a23" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 524
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a40" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 881
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a41" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 902
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a42" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 923
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a43" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 944
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a44" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 965
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a45" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 986
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a46" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1007
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a47" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1028
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a64" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1385
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a65" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1406
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a66" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1427
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a67" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1448
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a68" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1469
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a69" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1490
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a70" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1511
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a71" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1532
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a88" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1889
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a89" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1910
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a90" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1931
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a91" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1952
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a92" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1973
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a93" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 1994
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a94" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2015
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a95" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2036
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a112" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2393
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a113" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2414
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a114" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2435
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a115" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2456
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a116" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2477
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a117" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2498
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a118" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2519
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a119" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2540
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a136" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2897
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a137" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2918
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a138" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2939
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a139" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2960
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a140" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 2981
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a141" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3002
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a142" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3023
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a143" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3044
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a160" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3401
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a161" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3422
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a162" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3443
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a163" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3464
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a164" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3485
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a165" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3506
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a166" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3527
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a167" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3548
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a184" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3905
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a185" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3926
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a186" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3947
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a187" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3968
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a188" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 3989
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a189" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4010
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a190" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4031
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a191" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4052
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a208" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4409
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a209" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4430
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a210" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4451
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a211" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4472
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a212" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4493
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a213" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4514
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a214" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4535
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a215" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4556
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a232" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4913
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a233" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4934
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a234" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4955
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a235" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4976
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a236" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 4997
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a237" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5018
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a238" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5039
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a239" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5060
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a256" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5417
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a257" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5438
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a258" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5459
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a259" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5480
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a260" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5501
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a261" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5522
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a262" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5543
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a263" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5564
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a280" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5921
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a281" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5942
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a282" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5963
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a283" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 5984
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a284" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 6005
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a285" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 6026
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a286" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 6047
+        Warning (14320): Synthesized away node "ROM_image:ROM_image_inst|altsyncram:altsyncram_component|altsyncram_b3b1:auto_generated|ram_block1a287" File: C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/altsyncram_b3b1.tdf Line: 6068
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 429 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 44 logic cells
+    Info (21061): Implemented 205 logic cells
+    Info (21064): Implemented 192 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 329 warnings
-    Info: Peak virtual memory: 4809 megabytes
-    Info: Processing ended: Fri Nov 10 14:19:05 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 108 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Tue Nov 14 11:53:09 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:18
 
 

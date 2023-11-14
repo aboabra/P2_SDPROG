@@ -7,116 +7,116 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dW:/SDPROG/P2/Practica2/simulation/modelsim
+Z0 dC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/simulation/modelsim
 vcontNb
-Z1 !s110 1699622355
+Z1 !s110 1699959206
 !i10b 1
 !s100 THCgY11=6lM<[V]dGK_@g1
-IgPU95f3L0CRkQ1:mZHIkZ2
+IYcQLk2l^KZ8]cAJ:aW@nz3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1698403315
-8W:/SDPROG/P2/Practica2/contNb.v
-FW:/SDPROG/P2/Practica2/contNb.v
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v
 L0 16
 Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1699622355.000000
-!s107 W:/SDPROG/P2/Practica2/contNb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/contNb.v|
+Z4 !s108 1699959206.000000
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/contNb.v|
 !i113 1
 Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2}
 Z7 tCvgOpt 0
 ncont@nb
 vdatos_a_rgb
-Z8 !s110 1699622356
+R1
 !i10b 1
 !s100 dVFlofRBVn<^6T;k0V=zY1
-I>L]la7bOTGR?MUNe`l_[V3
+I=oH_@X3lP]<QeK[N>fW<71
 R2
 R0
 w1699620946
-8W:/SDPROG/P2/Practica2/datos_a_rgb.v
-FW:/SDPROG/P2/Practica2/datos_a_rgb.v
-L0 1
-R3
-r1
-!s85 0
-31
-Z9 !s108 1699622356.000000
-!s107 W:/SDPROG/P2/Practica2/datos_a_rgb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/datos_a_rgb.v|
-!i113 1
-R5
-R6
-R7
-vDireccionamiento
-R8
-!i10b 1
-!s100 @HFmMQ[Q:=_zMD3c:^;L=2
-I;@:;FgP<H6dV;W9>Ng;E92
-R2
-R0
-w1699622091
-8W:/SDPROG/P2/Practica2/Direccionamiento.v
-FW:/SDPROG/P2/Practica2/Direccionamiento.v
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/datos_a_rgb.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/datos_a_rgb.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 W:/SDPROG/P2/Practica2/Direccionamiento.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/Direccionamiento.v|
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/datos_a_rgb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/datos_a_rgb.v|
+!i113 1
+R5
+R6
+R7
+vDireccionamiento
+R1
+!i10b 1
+!s100 hk9NDWGiOCae0F`nKE2lJ1
+I5H^zR1B8WzC0P=72VGR0[1
+R2
+R0
+w1699958879
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/Direccionamiento.v|
 !i113 1
 R5
 R6
 R7
 n@direccionamiento
 vIMAGEN_LCD
-R8
+R1
 !i10b 1
-!s100 YfYAbj=GL[5HP47l2CefJ3
-IM=TSeFR>T4KMBnzk519zR2
+!s100 8]]7k6=FnT]X^__D_;2L@2
+I]<3bM59Q7=[]ZVP4i_PCn1
 R2
 R0
-w1699621898
-8W:/SDPROG/P2/Practica2/IMAGEN_LCD.v
-FW:/SDPROG/P2/Practica2/IMAGEN_LCD.v
+w1699959169
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v
 L0 1
 R3
 r1
 !s85 0
 31
-R9
-!s107 W:/SDPROG/P2/Practica2/IMAGEN_LCD.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/IMAGEN_LCD.v|
+R4
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD.v|
 !i113 1
 R5
 R6
 R7
 n@i@m@a@g@e@n_@l@c@d
 vIMAGEN_LCD_tb
-R8
+Z8 !s110 1699959207
 !i10b 1
 !s100 hEQ8F_ETG=W?6:Uf0faJV2
-IZPFhOBd1nlH`3THVmk9fH0
+IVb`RPP2aL39cPO6LL43N_0
 R2
 R0
 w1699621112
-8W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v
-FW:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD_tb.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD_tb.v
 L0 4
 R3
 r1
 !s85 0
 31
-R9
-!s107 W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v|
+!s108 1699959207.000000
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/IMAGEN_LCD_tb.v|
 !i113 1
 R5
 R6
@@ -126,20 +126,20 @@ vLCD_SYNC
 R1
 !i10b 1
 !s100 0[]R5M7l<7g5=f:k0a_0a3
-I:`3;V=Ag]SL0fB=8P?T7F1
+IDj0Y2=0MS==JfBWD_BM^G1
 R2
 R0
 w1699016911
-8W:/SDPROG/P2/Practica2/LCD_SYNC.v
-FW:/SDPROG/P2/Practica2/LCD_SYNC.v
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 W:/SDPROG/P2/Practica2/LCD_SYNC.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/LCD_SYNC.v|
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/LCD_SYNC.v|
 !i113 1
 R5
 R6
@@ -149,20 +149,20 @@ vpll_ltm
 R1
 !i10b 1
 !s100 Q^70^3EojlW=QNGlnA<Bz2
-I[E^^@eR[LK1SF9d2f]K8a1
+I?1l^CUS7YN?9z^K0fnb[V0
 R2
 R0
 w1698404423
-8W:/SDPROG/P2/Practica2/pll_ltm.v
-FW:/SDPROG/P2/Practica2/pll_ltm.v
-Z10 L0 39
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v
+Z9 L0 39
 R3
 r1
 !s85 0
 31
 R4
-!s107 W:/SDPROG/P2/Practica2/pll_ltm.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/pll_ltm.v|
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/pll_ltm.v|
 !i113 1
 R5
 R6
@@ -171,42 +171,42 @@ vpll_ltm_altpll
 R8
 !i10b 1
 !s100 ?IHm3iBd7n;AS18OkLTnF1
-I1JEBl_eiSHl_TH<Umg@Cg2
+I0YLL3bHZ>R0=fg`k:Qn1b2
 R2
 R0
-w1699615786
-8W:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v
-FW:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v
+w1699957371
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/pll_ltm_altpll.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/pll_ltm_altpll.v
 L0 30
 R3
 r1
 !s85 0
 31
-R9
-!s107 W:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2/db|W:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v|
+R4
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/pll_ltm_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db/pll_ltm_altpll.v|
 !i113 1
 R5
-!s92 -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2/db
+!s92 -vlog01compat -work work {+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/db}
 R7
 vROM_image
-R8
+R1
 !i10b 1
 !s100 :9ofcODodOb75SJD]A^AJ3
-InGCRICj8<zj;zF2GAGcog1
+Iz0Z9J6SD=kE7R6XOZD_gh1
 R2
 R0
 w1699619762
-8W:/SDPROG/P2/Practica2/ROM_image.v
-FW:/SDPROG/P2/Practica2/ROM_image.v
-R10
+8C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v
+FC:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v
+R9
 R3
 r1
 !s85 0
 31
-R9
-!s107 W:/SDPROG/P2/Practica2/ROM_image.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+W:/SDPROG/P2/Practica2|W:/SDPROG/P2/Practica2/ROM_image.v|
+R4
+!s107 C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2|C:/Users/alber/Desktop/Universidad/Sistemas digitales programables/Practicas/P2_SDPROG/P2_SDPROG/Practica2/ROM_image.v|
 !i113 1
 R5
 R6

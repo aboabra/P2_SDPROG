@@ -1,6 +1,6 @@
 Flow report for Practica2
-Fri Nov 10 14:19:05 2023
-Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+Tue Nov 14 11:53:09 2023
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -37,26 +37,26 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------------+
-; Flow Summary                                                                                  ;
-+------------------------------------+----------------------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 10 14:19:05 2023                    ;
-; Quartus Prime Version              ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
-; Revision Name                      ; Practica2                                                ;
-; Top-level Entity Name              ; IMAGEN_LCD                                               ;
-; Family                             ; Cyclone IV E                                             ;
-; Device                             ; EP4CE115F29C7                                            ;
-; Timing Models                      ; Final                                                    ;
-; Total logic elements               ; 44                                                       ;
-;     Total combinational functions  ; 44                                                       ;
-;     Dedicated logic registers      ; 21                                                       ;
-; Total registers                    ; 21                                                       ;
-; Total pins                         ; 31                                                       ;
-; Total virtual pins                 ; 0                                                        ;
-; Total memory bits                  ; 0                                                        ;
-; Embedded Multiplier 9-bit elements ; 0                                                        ;
-; Total PLLs                         ; 1                                                        ;
-+------------------------------------+----------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Tue Nov 14 11:53:09 2023       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Practica2                                   ;
+; Top-level Entity Name              ; IMAGEN_LCD                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C7                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 201                                         ;
+;     Total combinational functions  ; 201                                         ;
+;     Dedicated logic registers      ; 25                                          ;
+; Total registers                    ; 25                                          ;
+; Total pins                         ; 31                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,536,000                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/10/2023 14:18:53 ;
+; Start date & time ; 11/14/2023 11:52:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Practica2           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 335035121999.169962233307520           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 251682026063612.169995917017128        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; IMAGEN_LCD                             ; --            ; --          ; IMAGEN_LCD_tb  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; LCD_SYNC_tb    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; barras_lcd_tb  ;
@@ -116,8 +116,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4809 MB             ; 00:00:20                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4786 MB             ; 00:00:17                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:17                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -126,7 +126,7 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; dise02           ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Alberto_HP       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
