@@ -1,0 +1,171 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Practica2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/LCD_SYNC.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:15 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/LCD_SYNC.v 
+# -- Compiling module LCD_SYNC
+# 
+# Top level modules:
+# 	LCD_SYNC
+# End time: 14:19:15 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/contNb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:15 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/contNb.v 
+# -- Compiling module contNb
+# 
+# Top level modules:
+# 	contNb
+# End time: 14:19:15 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/pll_ltm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:15 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/pll_ltm.v 
+# -- Compiling module pll_ltm
+# 
+# Top level modules:
+# 	pll_ltm
+# End time: 14:19:15 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/Direccionamiento.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:15 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/Direccionamiento.v 
+# -- Compiling module Direccionamiento
+# 
+# Top level modules:
+# 	Direccionamiento
+# End time: 14:19:16 on Nov 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/ROM_image.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:16 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/ROM_image.v 
+# -- Compiling module ROM_image
+# 
+# Top level modules:
+# 	ROM_image
+# End time: 14:19:16 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/IMAGEN_LCD.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:16 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/IMAGEN_LCD.v 
+# -- Compiling module IMAGEN_LCD
+# 
+# Top level modules:
+# 	IMAGEN_LCD
+# End time: 14:19:16 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/datos_a_rgb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:16 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/datos_a_rgb.v 
+# -- Compiling module datos_a_rgb
+# 
+# Top level modules:
+# 	datos_a_rgb
+# End time: 14:19:16 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2/db {W:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:16 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2/db" W:/SDPROG/P2/Practica2/db/pll_ltm_altpll.v 
+# -- Compiling module pll_ltm_altpll
+# 
+# Top level modules:
+# 	pll_ltm_altpll
+# End time: 14:19:16 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+W:/SDPROG/P2/Practica2 {W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:19:16 on Nov 10,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+W:/SDPROG/P2/Practica2" W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v 
+# -- Compiling module IMAGEN_LCD_tb
+# 
+# Top level modules:
+# 	IMAGEN_LCD_tb
+# End time: 14:19:16 on Nov 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  IMAGEN_LCD_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" IMAGEN_LCD_tb 
+# Start time: 14:19:16 on Nov 10,2023
+# Loading work.IMAGEN_LCD_tb
+# Loading work.IMAGEN_LCD
+# Loading work.LCD_SYNC
+# Loading work.pll_ltm
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.contNb
+# Loading work.Direccionamiento
+# Loading work.ROM_image
+# Loading altera_mf_ver.altsyncram
+# Loading work.datos_a_rgb
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) W:/SDPROG/P2/Practica2/IMAGEN_LCD.v(11): [PCDPC] - Port size (11) does not match connection size (1) for port 'COLUMNA'. The port definition is at: W:/SDPROG/P2/Practica2/LCD_SYNC.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/lcd_sync_module File: W:/SDPROG/P2/Practica2/LCD_SYNC.v
+# ** Warning: (vsim-3015) W:/SDPROG/P2/Practica2/IMAGEN_LCD.v(11): [PCDPC] - Port size (10) does not match connection size (1) for port 'FILA'. The port definition is at: W:/SDPROG/P2/Practica2/LCD_SYNC.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/lcd_sync_module File: W:/SDPROG/P2/Practica2/LCD_SYNC.v
+# ** Warning: (vsim-3017) W:/SDPROG/P2/Practica2/LCD_SYNC.v(40): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/lcd_sync_module/pll_timer File: W:/SDPROG/P2/Practica2/pll_ltm.v
+# ** Warning: (vsim-3722) W:/SDPROG/P2/Practica2/LCD_SYNC.v(40): [TFMPC] - Missing connection for port 'areset'.
+# ** Warning: (vsim-3722) W:/SDPROG/P2/Practica2/LCD_SYNC.v(40): [TFMPC] - Missing connection for port 'locked'.
+# ** Warning: (vsim-3015) W:/SDPROG/P2/Practica2/IMAGEN_LCD.v(12): [PCDPC] - Port size (9) does not match connection size (1) for port 'FILA'. The port definition is at: W:/SDPROG/P2/Practica2/Direccionamiento.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/Dir_module File: W:/SDPROG/P2/Practica2/Direccionamiento.v
+# ** Warning: (vsim-3015) W:/SDPROG/P2/Practica2/IMAGEN_LCD.v(12): [PCDPC] - Port size (10) does not match connection size (1) for port 'COLUMNA'. The port definition is at: W:/SDPROG/P2/Practica2/Direccionamiento.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/Dir_module File: W:/SDPROG/P2/Practica2/Direccionamiento.v
+# ** Warning: (vsim-3015) W:/SDPROG/P2/Practica2/IMAGEN_LCD.v(13): [PCDPC] - Port size (24) does not match connection size (16) for port 'q'. The port definition is at: W:/SDPROG/P2/Practica2/ROM_image.v(42).
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/ROM_image_inst File: W:/SDPROG/P2/Practica2/ROM_image.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../imagen_rgb16_xy.hex" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(870)
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/ROM_image_inst/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../imagen_rgb16_xy.hex.
+# ** Warning: (vsim-7) Failed to open readmem file "../imagen_rgb16_xy.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /IMAGEN_LCD_tb/DUT/ROM_image_inst/altsyncram_component/m_default/altsyncram_inst
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: IMAGEN_LCD_tb.DUT.lcd_sync_module.pll_timer.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint sim:/IMAGEN_LCD_tb/DUT/ROM_image_inst/*
+add wave -position insertpoint  \
+sim:/IMAGEN_LCD_tb/DUT/Dir_module/fila_p \
+sim:/IMAGEN_LCD_tb/DUT/Dir_module/columna_p \
+sim:/IMAGEN_LCD_tb/DUT/Dir_module/fila_i \
+sim:/IMAGEN_LCD_tb/DUT/Dir_module/columna_i
+add wave -position insertpoint  \
+sim:/IMAGEN_LCD_tb/DUT/Dir_module/address
+# Fin de la simulacion
+# 
+# Cierro  fichero
+# ** Note: $stop    : W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v(33)
+#    Time: 22112980 ns  Iteration: 0  Instance: /IMAGEN_LCD_tb
+# Break in Module IMAGEN_LCD_tb at W:/SDPROG/P2/Practica2/IMAGEN_LCD_tb.v line 33
+# End time: 14:23:18 on Nov 10,2023, Elapsed time: 0:04:02
+# Errors: 0, Warnings: 10

@@ -1,0 +1,13 @@
+module datos_a_rgb (data, R, G, B);
+	
+	input		  [15:0]	data;
+	output reg [7:0]	R;
+	output reg [7:0]	G;
+	output reg [7:0]	B;
+	
+	assign R[7:0] = {data[15:11]	,  data[15:13]};
+	assign G[7:0] = {data[10:6]	,  data[10:8]}	;
+	assign B[7:0] = {data[5:0]		,  data[5:3]}	; 
+	
+	
+endmodule

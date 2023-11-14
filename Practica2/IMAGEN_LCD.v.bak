@@ -1,0 +1,9 @@
+module IMAGEN_LCD (CLK,RST_n);
+
+	
+	LCD_SYNC 			lcd_sync_module 		(CLK,RST_n,NCLK,GREST,HD,VD,DEN, COLUMNA, FILA);
+	Direccionamiento 	Dir_module				(FILA, COLUMNA, address);
+	ROM_image			ROM_image_inst			(.address(address), .clock(CLK), .q(Data));
+
+
+endmodule

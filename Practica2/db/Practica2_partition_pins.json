@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "GREST",
+					"strict" : false
+				},
+				{
+					"name" : "HD",
+					"strict" : false
+				},
+				{
+					"name" : "VD",
+					"strict" : false
+				},
+				{
+					"name" : "DEN",
+					"strict" : false
+				},
+				{
+					"name" : "RST_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
